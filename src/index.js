@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { useState } from 'react'
 
+
 const Square = ({value, onClick}) => {
       return (
         <button className="square" 
@@ -14,7 +15,7 @@ const Square = ({value, onClick}) => {
     }
    
   const Board = ({squares, onClick}) => (
-      <div>
+      <div className='board-row'>
       {squares.map((square, i) =>(
       <Square 
       key={i}
@@ -73,15 +74,15 @@ const Game = () => {
         const desc = move ? 'Go to move #'+ move : 'Go to game start';
         return (
           <li key={move}>
-            <button onClick= {() => jumpTo(move)}>{desc}</button>
+            <button className='button' onClick= {() => jumpTo(move)}>{desc}</button>
           </li>
         );
       });
     
       return(
         <>
-        <Board squares= {history[stepNumber]} onClick= {handleClick} />
-        <div>
+        <Board  squares= {history[stepNumber]} onClick= {handleClick} />
+        <div className='game'>
           {renderMoves()}
         </div>
    <h3>
