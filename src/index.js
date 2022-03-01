@@ -25,23 +25,6 @@ const Square = ({value, onClick}) => {
       ))}
       </div>
   );
-          /* <div className="board-row">
-            {setSquare(0)}
-            {setSquare(1)}
-            {setSquare(2)}
-          </div>
-          <div className="board-row">
-            {setSquare(3)}
-            {setSquare(4)}
-            {setSquare(5)}
-          </div>
-          <div className="board-row">
-            {setSquare(6)}
-            {setSquare(7)}
-            {setSquare(8)}
-          </div>
-        // </div>
-      ); */
 
   
 const Game = () => {
@@ -73,9 +56,9 @@ const Game = () => {
       history.map((_step, move) => {
         const desc = move ? 'Go to move #'+ move : 'Go to game start';
         return (
-          <li key={move}>
+          <ol key={move}>
             <button className='button' onClick= {() => jumpTo(move)}>{desc}</button>
-          </li>
+          </ol>
         );
       });
     
@@ -93,22 +76,6 @@ const Game = () => {
           </>
       );
         };
-  //     return (
-  //       <div className="game">
-  //         <div className="game-board">
-  //           <Board 
-  //           squares = {current.squares}
-  //           onClick = {(i) => this.handleClick(i)} />
-  //         </div>
-  //         <div className="game-info">
-  //           <div>{status}</div>
-  //           <ol>{ moves }</ol>
-  //         </div>
-  //       </div>
-  //     );
-  //   }
-  // }
-  
   // ========================================
   
   ReactDOM.render(

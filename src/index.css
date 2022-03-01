@@ -4,7 +4,9 @@ body {
     color: #324950;
     margin-top: 60px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
   
   li {
