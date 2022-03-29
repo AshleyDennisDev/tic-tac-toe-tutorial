@@ -15,7 +15,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "aws s3 sync build/ s3://tic-tac-toe-ad",
+    "prod": "npm build && npm deploy"
   },
   "eslintConfig": {
     "extends": [
